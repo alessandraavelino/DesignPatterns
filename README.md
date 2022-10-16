@@ -6,7 +6,7 @@ REFATORE O CÓDIGO ACIMA APLICANDO OS PADRÕES DE
 RESPONSABILIDADE EXPERT, CREATOR, BAIXO ACOPLAMENTO E ALTA
 COESÃO
 
-`
+```
 //Classe Fita
 public class Fita {
 public static final int NORMAL = 0;
@@ -124,4 +124,4 @@ Fita.INFANTIL), 30));
 System.out.println(c1.extrato());
 }
 }
-`
+```
