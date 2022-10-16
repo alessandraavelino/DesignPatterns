@@ -1,15 +1,23 @@
 # DesignPatterns
 Projeto de refatoração de códigos, seguindo os padrões GRASP.
-
+<br>
 
 REFATORE O CÓDIGO APLICANDO OS PADRÕES DE
 RESPONSABILIDADE EXPERT, CREATOR, BAIXO ACOPLAMENTO E ALTA
 COESÃO
-
-**Expert:** Atribuir a a responsabilidade à classe que possui as informações para satisfazê-las.
+<br>
+**Expert:** Atribuir a  responsabilidade à classe que possui as informações para satisfazê-las.
+<br>
 **Creator:** A criação de Objetos no sistema, atribuindo a responsabilidade de criação à classes que realmente fazem sentido ter essa atribuição.
+<br>
 **Baixo acoplamento:** Medida de quão forte um elemento está conectado, tem conhecimento ou depende de outros elementos.
-**Alta coesão:** A alta coesão significa que as responsabilidades de um determinado elemento estão fortemente relacionadas e altamente focadas. 
+<br>
+**Alta coesão:** A alta coesão significa que as responsabilidades de um determinado elemento estão fortemente relacionadas e altamente focadas.
+<br>
+
+A princípio foi observado que a Classe Cliente, possuia muitas responsabilidades/métodos, saindo do padrão de Alta Coesão, para isso, foi removido o método de alugador frequente, valor de aluguel e título, e inserido em uma interface, para que a classe fita, implemente esses métodos. Dessa forma, ficaria com um Baixo Acoplamento, já que estaria com menos dependência e não teria tanto impacto em outras classes, ao fazer modificações.
+<br>
+
 ```
 //Classe Fita
 public class Fita {
@@ -36,6 +44,9 @@ public class Fita {
         this.códigoDePreço = códigoDePreço;
     }
 }
+```
+
+```
 //Classe Aluguel
 public class Aluguel {
     private Fita fita;
@@ -54,7 +65,10 @@ public class Aluguel {
         return diasAlugada;
     }
 }
+```
 
+```
+//Classe cliente
 import java.util.*;
 
 public class Cliente {
@@ -120,7 +134,10 @@ public class Cliente {
         return resultado;
     }
 }
+```
 
+```
+//Classe locadora
 public class Locadora {
     public static void main(String[] args) {
         Cliente c1 = new Cliente("Juliana");
