@@ -15,7 +15,7 @@ COESÃO
 **Alta coesão:** A alta coesão significa que as responsabilidades de um determinado elemento estão fortemente relacionadas e altamente focadas.
 <br>
 
-A princípio foi observado que a Classe Cliente, possuia muitas responsabilidades/métodos, saindo do padrão de Alta Coesão, para isso, foi removido o método de alugador frequente, valor de aluguel e título, e inserido em uma interface, para que a classe fita, implemente esses métodos. Dessa forma, ficaria com um Baixo Acoplamento, já que estaria com menos dependência e não teria tanto impacto em outras classes, ao fazer modificações.
+A princípio foi observado que a Classe Cliente, possuia muitas responsabilidades/métodos, saindo do padrão de Alta Coesão, para isso, foi removido o método de alugador frequente, valor de aluguel e título, e inserido em uma interface, para que as fitas por categoria (normal, infantil e lançamento) possam implementar esses métodos. Dessa forma, com o padrão Creator, as atribuição foram dadas corretamente.
 <br>
 
 ```
